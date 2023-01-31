@@ -1,0 +1,137 @@
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 2rem;
+}
+
+fieldset {
+    border: 3px solid var(--color-bg-2);
+    border-radius: .5rem;
+    padding: 1.5rem 3rem;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-size: 1.2rem;
+    padding: 0 2rem;
+
+}
+
+.input-group {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+input,
+textarea {
+    position: relative;
+    min-height: 2rem;
+    padding: .5rem 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 7rem;
+    height: auto;
+}
+
+label, p.label {
+    margin-bottom: .6rem;
+    font-style: italic;
+}
+
+label[data-tooltip],
+label[data-required],
+p.label[data-tooltip],
+p.label[data-required] {
+    position: relative;
+}
+
+label[data-tooltip]::after,
+label[data-required]::after,
+p.label[data-tooltip]::after,
+p.label[data-required]::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    vertical-align: super;
+    font-size: .8rem;
+    opacity: .5;
+}
+
+label[data-tooltip]::after,
+p.label[data-tooltip]::after {
+    content: attr(data-tooltip);
+}
+
+label[data-required]::after,
+p.label[data-required]::after {
+    content: '(required)';
+}
+
+label[data-tooltip][data-required]::after,
+p.label[data-tooltip][data-required]::after {
+    content: attr(data-tooltip) ' ' '(required)';
+}
+
+button[type="submit"] {
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button .icon {
+    margin-right: .7rem;
+}
+
+
+.toggle {
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+.toggle + label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 25px;
+    background: grey;
+    display: block;
+    border-radius: 50px;
+    position: relative;
+    align-self: center;
+}
+
+.toggle + label:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 45px;
+    transition: 0.3s;
+}
+
+.toggle:checked + label {
+    background: #bada55;
+}
+
+.toggle:checked + label:after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+}
+
+.toggle + label:active:after {
+    width: 50px;
+}

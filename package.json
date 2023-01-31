@@ -16,6 +16,7 @@
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.5.1",
+		"@types/mime-types": "^2.1.1",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
 		"eslint": "^8.16.0",
@@ -24,11 +25,20 @@
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.46.0",
+		"svelte-bootstrap-icons": "^2.2.0",
 		"svelte-check": "^2.7.1",
 		"svelte-preprocess": "^4.10.6",
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.4",
 		"vite": "^3.1.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@types/mysql": "^2.15.21",
+		"@types/uuid": "^8.3.4",
+		"mime-types": "^2.1.35",
+		"mysql": "^2.18.1",
+		"promise-mysql": "^5.2.0",
+		"uuid": "^9.0.0"
+	}
 }
